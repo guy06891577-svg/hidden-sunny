@@ -10,8 +10,8 @@ header{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#8b5a
 #board{flex:1;position:relative;overflow:hidden;touch-action:none}
 #bgblur{position:absolute;inset:-20px;background:center/cover no-repeat;filter:blur(14px) brightness(.85)}
 #scene{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
-#zoombtns{position:absolute;right:8px;bottom:10px;display:flex;flex-direction:column;gap:6px}
-#zoombtns button{width:40px;height:40px;border-radius:50%;border:0;background:#fffc;color:#5a3a20;font-size:20px;font-weight:900;box-shadow:0 2px 6px #0004}
+#bar{display:flex;align-items:center;gap:6px;padding-right:6px}#bar #msg{flex:1}#zoombtns{display:flex;gap:5px}
+#zoombtns button{width:34px;height:34px;padding:0;border-radius:50%;border:0;background:#fffc;color:#5a3a20;font-size:20px;font-weight:900;box-shadow:0 2px 6px #0004}
 .miss{animation:miss .8s forwards;transform-box:fill-box;transform-origin:center}@keyframes miss{to{opacity:0;transform:scale(1.6)}}
 .pulse{animation:pulse 1s ease-in-out 3;transform-box:fill-box;transform-origin:center}@keyframes pulse{50%{opacity:.45}}
 .pop{animation:pop .6s cubic-bezier(.3,1.6,.5,1) both;transform-box:fill-box;transform-origin:center bottom}@keyframes pop{from{transform:scale(0)}}
@@ -19,3 +19,8 @@ header{display:flex;align-items:center;gap:6px;padding:8px 10px;background:#8b5a
 #overlay{position:fixed;inset:0;background:#0007;display:flex;align-items:center;justify-content:center;z-index:9}.hidden{display:none!important}
 .card{background:#fff8ec;border-radius:18px;padding:22px;text-align:center;width:84%;max-width:330px;color:#5a3a20}
 .card h2{margin:0 0 6px;font-size:21px}#stars{font-size:34px;letter-spacing:4px;color:#f4b400}.card button{margin:4px}
+#menubtn{border:0;background:#fff3;color:#fff;border-radius:10px;font-size:16px;padding:4px 9px}
+#menu{position:fixed;inset:0;z-index:8;overflow-y:auto;background:#f6d9a8;padding:14px 14px 30px;max-width:520px;margin:0 auto;color:#5a3a20}
+#menu h2{text-align:center;margin:6px 0 4px}#menu h3{margin:14px 0 8px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.st{border:0;border-radius:14px;background:#fff8ec;color:#5a3a20;padding:8px 2px;display:flex;flex-direction:column;align-items:center;gap:2px;box-shadow:0 2px 4px #0002;font-size:12px}
+.st b{font-size:17px}.st i{font-style:normal;color:#f4b400;font-size:11px;min-height:14px}.st:disabled{opacity:.5}.tot{text-align:center;font-weight:700}

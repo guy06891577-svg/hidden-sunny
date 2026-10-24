@@ -3,11 +3,11 @@
 <meta name="theme-color" content="#8b5a3c"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
 <title>숨은 써니 찾기</title><link rel="stylesheet" href="style.css"></head><body>
 <div id="app">
-<header><div id="stage">1/8</div><div id="timer">⏱ 3:00</div><div id="count">🐱 0/0</div><button id="hint">💡3</button></header>
-<div id="msg">써니들이 숨어 있어요! 두 손가락으로 확대, 드래그로 이동하세요.</div>
+<header><button id="menubtn">☰</button><div id="stage">1/8</div><div id="timer">⏱ 3:00</div><div id="count">🐱 0/0</div><button id="hint">💡3</button></header>
+<div id="bar"><div id="msg">써니들이 숨어 있어요!</div><div id="zoombtns"><button id="zin">＋</button><button id="zout">－</button><button id="zfit">⤢</button></div></div>
 <div id="board"><div id="bgblur"></div><svg id="scene" viewBox="0 0 720 1280" preserveAspectRatio="xMidYMid meet"><g id="world"></g></svg>
-<div id="zoombtns"><button id="zin">＋</button><button id="zout">－</button><button id="zfit">⤢</button></div></div>
-<div id="overlay" class="hidden"><div class="card"><h2 id="otitle"></h2><div id="stars"></div><p id="otext"></p><button id="retry" class="hidden">다시 하기</button><button id="next">다음</button></div></div>
+</div>
+<div id="menu" class="hidden"></div><div id="overlay" class="hidden"><div class="card"><h2 id="otitle"></h2><div id="stars"></div><p id="otext"></p><button id="retry" class="hidden">다시 하기</button><button id="next">다음</button><button id="tomenu" onclick="document.getElementById('overlay').classList.add('hidden');showMenu()">메뉴</button></div></div>
 </div><script src="game.js"></script>
-<script>if('serviceWorker'in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js')</script>
+<script>if('serviceWorker'in navigator&&location.protocol!=='file:'){navigator.serviceWorker.register('sw.js');let r=0;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!r){r=1;location.reload()}})}</script>
 </body></html>
