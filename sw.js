@@ -1,4 +1,4 @@
-const C='sunny-v10',F=['./','index.html','style.css','game.js','manifest.json','icon.svg','img/sunny.png'];
+const C='sunny-v11',F=['./','index.html','style.css','game.js','manifest.json','icon.svg','img/sunny.png'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(F)))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;
